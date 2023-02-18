@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cookie Demo</title>
+    <style>
+      body {
+        background-color: white;
+      }
+
+      .red {
+        background-color: #ff9999;
+      }
+
+      .blue {
+        background-color: #99ccff;
+      }
+
+      .green {
+        background-color: #b3ffb3;
+      }
+
+      .yellow {
+        background-color: #ffff99;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cookie Demo</h1>
+
+    <form action="set-cookie.php" method="post">
+      <label for="color">Select color:</label>
+      <select name="color" id="color">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+      </select>
+      <br />
+      <label for="expire">Expire in:</label>
+      <select name="expire" id="expire">
+        <option value="3600">1 hour</option>
+        <option value="86400">1 day</option>
+        <option value="604800">1 week</option>
+        <option value="2592000">1 month</option>
+      </select>
+      <br />
+      <input type="submit" value="Set Cookie" />
+    </form>
+
+    <br />
+
+    <form action="destroy-cookie.php" method="post">
+      <input type="submit" value="Destroy Cookie" />
+    </form>
+  </body>
+</html>
